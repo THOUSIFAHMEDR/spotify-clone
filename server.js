@@ -12,6 +12,10 @@ const app = express()  // ← app created first
 app.use(express.json())        // ← then middleware
 app.use(express.static(__dirname))
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/spotify.html')
+})
+
 mongoose.connect(process.env.MONGO_URL, {
     serverSelectionTimeoutMS: 10000,
     family: 4,
