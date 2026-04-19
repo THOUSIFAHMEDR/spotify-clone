@@ -4,8 +4,8 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const Song = require('./models/song')
-const Artist = require('./models/artist')
-const User = require('./models/user')
+const Artist = require('./models/Artist')
+const User = require('./models/User')
 
 const app = express()  // ← app created first
 
