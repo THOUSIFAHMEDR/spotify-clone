@@ -528,3 +528,189 @@ ul li {
 #volume-bar {
   width: 80px;
 }
+/* ─── RESPONSIVE ─── */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+
+    /* Nav */
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* Hide some nav items on tablet */
+    .content .black:nth-child(1),
+    .content .black:nth-child(2),
+    .content .black:nth-child(3),
+    .content .black:nth-child(4) {
+        display: none;
+    }
+
+    /* Search bar */
+    nav > div[style] {
+        width: 200px !important;
+    }
+
+    /* Main layout */
+    main {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        margin: 5px 5px 0 5px;
+    }
+
+    /* Hide sidebar footer on mobile */
+    .sidebar-footer {
+        display: none;
+    }
+
+    /* Container */
+    .container {
+        height: auto;
+        overflow-y: visible;
+        padding: 15px;
+    }
+
+    /* Cards */
+    .card, .card1 {
+        min-width: 150px;
+        width: 150px;
+    }
+
+    .card img, .card1 img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Footer grid */
+    .footcontent {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Player */
+    #player {
+        gap: 10px;
+        padding: 0 10px;
+        height: 70px;
+    }
+
+    .player-volume {
+        display: none;
+    }
+
+    .player-progress span {
+        display: none;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+
+    /* Nav */
+    nav {
+        gap: 8px;
+    }
+
+    /* Hide home icon */
+    .home {
+        display: none;
+    }
+
+    /* Search bar smaller */
+    nav > div[style] {
+        width: 150px !important;
+    }
+
+    /* Hide premium support download from nav */
+    .content .black {
+        display: none;
+    }
+
+    /* Show only login button */
+    .content button {
+        display: block;
+    }
+
+    /* Sidebar sections */
+    .fi, .si {
+        margin-top: 15px;
+        padding: 8px;
+    }
+
+    /* Cards smaller */
+    .card, .card1 {
+        min-width: 130px;
+        width: 130px;
+    }
+
+    .card img, .card1 img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .card h4, .card1 h4 {
+        font-size: 14px;
+    }
+
+    .card p, .card1 p {
+        font-size: 12px;
+    }
+
+    /* Section headings */
+    h3 {
+        font-size: 16px;
+    }
+
+    h5 {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    /* Footer grid single column */
+    .footcontent {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Player minimal */
+    #player {
+        height: 60px;
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    #player img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .player-info {
+        min-width: 100px;
+    }
+
+    .player-info span {
+        font-size: 11px;
+    }
+
+    .player-controls button {
+        font-size: 16px;
+    }
+
+    #progress-bar {
+        display: none;
+    }
+}
